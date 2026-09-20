@@ -1,0 +1,8 @@
+node_modules
+.next
+data/traces/*.json
+!data/traces/.gitkeep
+.env
+.env.local
+data/.auth-secret
+*.tsbuildinfo

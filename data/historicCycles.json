@@ -1,0 +1,8 @@
+[
+  { "ratingLevel": "Exceeds Expectations", "cycle": "2025-Q2", "team": "Atlas", "text": "Consistently exceeds targets; delivered the platform migration ahead of schedule." },
+  { "ratingLevel": "Exceeds Expectations", "cycle": "2025-Q3", "team": "Orion", "text": "Strong quarter, mentored two junior engineers and led the incident response." },
+  { "ratingLevel": "Exceeds Expectations", "cycle": "2025-Q4", "team": "Nova", "text": "Ready for the next level; excellent ownership of the incident, though pace needs to hold." },
+  { "ratingLevel": "Meets Expectations", "cycle": "2025-Q2", "team": "Vega", "text": "Delivered assigned work on time; needs more initiative on cross-team projects." },
+  { "ratingLevel": "Meets Expectations", "cycle": "2025-Q3", "team": "Atlas", "text": "Adequate progress this cycle; still needs to build more independence and reduce risk on deliverables." },
+  { "ratingLevel": "Meets Expectations", "cycle": "2025-Q4", "team": "Orion", "text": "Solid, dependable execution with ready follow-through, though pace needs to hold next cycle." }
+]

@@ -1,0 +1,12 @@
+[
+  { "id": "alice", "name": "Alice Chen", "role": "vp", "managerId": null, "team": "Engineering" },
+  { "id": "bob", "name": "Bob Martinez", "role": "manager", "managerId": "alice", "team": "Nova" },
+  { "id": "priya", "name": "Priya Nair", "role": "senior-manager", "managerId": "alice", "team": "Orion" },
+  { "id": "taylor", "name": "Taylor Reyes", "role": "manager", "managerId": "alice", "team": "Vega", "juniorManager": true },
+  { "id": "dana", "name": "Dana Kim", "role": "ic", "managerId": "bob", "team": "Nova" },
+  { "id": "sam", "name": "Sam O'Brien", "role": "ic", "managerId": "bob", "team": "Nova" },
+  { "id": "jordan", "name": "Jordan Lee", "role": "ic", "managerId": "priya", "team": "Orion" },
+  { "id": "casey", "name": "Casey Zhang", "role": "ic", "managerId": "priya", "team": "Orion" },
+  { "id": "morgan", "name": "Morgan Blake", "role": "ic", "managerId": "taylor", "team": "Vega" },
+  { "id": "riley", "name": "Riley Park", "role": "hr", "managerId": null, "team": "HR" }
+]

@@ -1,0 +1,22 @@
+{
+  "dana": [
+    { "date": "2026-04-10", "type": "shipped_feature", "description": "Shipped the checkout migration two weeks ahead of schedule." },
+    { "date": "2026-06-22", "type": "incident", "description": "Led incident response for a payments outage, resolved within SLA." },
+    { "date": "2026-08-01", "type": "escalation", "description": "Handled a high-priority customer escalation directly; customer feedback was positive." }
+  ],
+  "sam": [
+    { "date": "2026-03-15", "type": "mentorship", "description": "Onboarded and mentored two new hires." },
+    { "date": "2026-07-02", "type": "shipped_feature", "description": "Shipped the internal tooling revamp." }
+  ],
+  "jordan": [
+    { "date": "2026-05-20", "type": "shipped_feature", "description": "Delivered the new checkout flow." },
+    { "date": "2026-07-10", "type": "incident", "description": "A test coverage gap caused a production regression; required a hotfix." }
+  ],
+  "casey": [
+    { "date": "2026-04-01", "type": "shipped_feature", "description": "Led the Orion team's infra migration end to end." },
+    { "date": "2026-08-15", "type": "mentorship", "description": "Mentoring a junior engineer while preparing a promotion packet." }
+  ],
+  "morgan": [
+    { "date": "2026-06-01", "type": "ramp", "description": "First full cycle on the team; still ramping up on the codebase." }
+  ]
+}

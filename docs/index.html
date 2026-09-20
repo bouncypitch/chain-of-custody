@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chain of Custody — Demo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#08090c;
+    --surface:#131620;
+    --border:#262b38;
+    --border-soft:#1a1e29;
+    --ink:#f3f5f9;
+    --ink-dim:#9aa1b2;
+    --ink-faint:#565d6e;
+    --accent:#7c93ff;
+    --accent-2:#4dd8a8;
+    --deny:#ff7a7a;
+    --mono:'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans:'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background-color:var(--bg);
+    background-image: radial-gradient(rgba(255,255,255,0.045) 1px, transparent 1.2px);
+    background-size: 26px 26px;
+    color:var(--ink);
+    font-family:var(--sans);
+    padding: clamp(24px,6vw,80px) clamp(18px,6vw,80px) 80px;
+  }
+  .wrap{ max-width:920px; margin:0 auto; }
+  .eyebrow{
+    font-family:var(--mono); font-size:12px; font-weight:500; letter-spacing:0.18em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 18px;
+  }
+  h1{
+    font-weight:800; font-size:clamp(2rem,5vw,3.4rem); line-height:1.05;
+    letter-spacing:-0.02em; margin:0 0 20px; text-wrap:balance;
+  }
+  h1 span{ color:var(--accent); }
+  p.lede{
+    font-size:clamp(1.02rem,1.6vw,1.2rem); line-height:1.6; color:var(--ink-dim);
+    max-width:66ch; margin:0 0 36px;
+  }
+  .video-frame{
+    border:1px solid var(--border); border-radius:12px; overflow:hidden;
+    background:var(--surface); margin-bottom:20px;
+  }
+  video{ display:block; width:100%; height:auto; }
+  .links{
+    display:flex; gap:12px; flex-wrap:wrap; margin-bottom:56px;
+  }
+  .links a{
+    font-family:var(--mono); font-size:13px; color:var(--ink);
+    text-decoration:none; border:1px solid var(--border); border-radius:8px;
+    padding:10px 16px; transition:border-color .15s, color .15s;
+  }
+  .links a:hover{ border-color:var(--accent); color:var(--accent); }
+  .links a.primary{ background:var(--accent); color:#05060a; border-color:var(--accent); font-weight:600; }
+
+  .catchlist{ display:flex; flex-direction:column; gap:10px; max-width:680px; margin-bottom:56px; }
+  .catchitem{ display:flex; gap:12px; align-items:baseline; font-family:var(--mono); font-size:13px; color:var(--ink-dim); }
+  .stamp{
+    font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:0.1em;
+    padding:4px 10px; border-radius:4px; text-transform:uppercase; flex-shrink:0;
+    background:rgba(255,122,122,0.12); color:var(--deny); border:1px solid rgba(255,122,122,0.35);
+  }
+
+  h2{ font-size:1.05rem; font-weight:700; color:var(--ink); margin:0 0 16px; }
+  .section{ margin-bottom:56px; }
+  .section p{ color:var(--ink-dim); line-height:1.65; max-width:70ch; font-size:0.98rem; }
+  .section code{ font-family:var(--mono); background:var(--surface); padding:2px 6px; border-radius:4px; color:var(--accent); font-size:0.9em; }
+
+  footer{
+    border-top:1px solid var(--border-soft); padding-top:24px;
+    font-family:var(--mono); font-size:12px; color:var(--ink-faint);
+  }
+  footer a{ color:var(--ink-dim); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">AGI House · Enterprise Deployment Build Day</div>
+  <h1>Chain of Custody — <span>every attempt, caught.</span></h1>
+  <p class="lede">
+    An AI agent that drafts performance-calibration packets for managers — wrapped in a security layer
+    that checks not just who's asking for data, but who's about to <em>read</em> the answer. Five live
+    attacks recorded end to end against the running app below. Not staged.
+  </p>
+
+  <div class="video-frame">
+    <video src="every-attempt-caught.mp4" controls playsinline preload="metadata"></video>
+  </div>
+  <div class="links">
+    <a class="primary" href="https://github.com/bouncypitch/chain-of-custody">View source on GitHub</a>
+    <a href="https://claude.ai/artifact/1YFva7ai4EoBw7JaBesppv">Pitch deck</a>
+    <a href="every-attempt-caught.gif">Download as GIF</a>
+  </div>
+
+  <div class="section">
+    <h2>What's being caught</h2>
+    <div class="catchlist">
+      <div class="catchitem"><span class="stamp">Caught</span> Prompt injection — an embedded instruction tries to widen a manager's access to another team's data. Denied at the input gate before any data leaves the store.</div>
+      <div class="catchitem"><span class="stamp">Caught</span> Wrong-reader leak — a manager's legitimate draft, addressed straight to the employee it's about, gets its private note and stack rank redacted before delivery. The rating still passes through; that's hers to see.</div>
+      <div class="catchitem"><span class="stamp">Caught</span> Fabricated claim — a plausible-sounding line never backed by any real fetch gets blocked by a closed-world grounding check. Untraceable to a gated fetch means blocked by default.</div>
+      <div class="catchitem"><span class="stamp">Caught</span> Tampered audit entry — a trace record edited directly on disk is caught twice, independently: the recomputed policy check disagrees, and the hash chain is broken.</div>
+      <div class="catchitem"><span class="stamp">Caught</span> Forged token — a corrupted authentication token is rejected at login, signature verification failing before it ever reaches a scenario.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Why this exists</h2>
+    <p>
+      Nearly 90% of agent pilots never reach production — stalled in security review, not capability.
+      Identity platforms scope what an agent can <em>fetch</em>. Almost none of them check what happens to
+      that access afterward: an agent can be fully entitled to a fact and still leak it to the wrong reader.
+      That failure mode is named directly in <em>"Enterprise AI Must Enforce Participant-Aware Access
+      Control"</em> — Chain of Custody is a working answer to it, built and demoed end to end in one day.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Run it yourself</h2>
+    <p>
+      <code>git clone https://github.com/bouncypitch/chain-of-custody.git && cd chain-of-custody && npm install && npm run dev</code>
+      — then open <code>localhost:3000</code>, log in as any org member, and run the four scenarios.
+      Full details in the <a href="https://github.com/bouncypitch/chain-of-custody#readme" style="color:var(--accent)">README</a>.
+    </p>
+  </div>
+
+  <footer>
+    Built in one day for AGI House's Enterprise Deployment Build Day, September 19, 2026.
+  </footer>
+</div>
+</body>
+</html>
